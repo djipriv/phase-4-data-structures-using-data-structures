@@ -10,8 +10,8 @@
 ## Introduction
 
 What is a data structure? In essence, a data structure is a tool for organizing
-a collection data so that we can interact with it efficiently. In general, all
-data structures share the following characteristics:
+a collection data so that we can interact with it efficiently. All data
+structures share the following characteristics:
 
 - They store **collections of values**
 - They also store the **relationship between those values**
@@ -23,7 +23,7 @@ languages. In Ruby and JavaScript, arrays have the following characteristics:
 
 - They stores a collection of values of any data type
 - They stores those values in an indexed list
-- They provides many methods for interacting with those values, like:
+- They provide many methods for interacting with those values, like:
   - accessing elements at a particular index position
   - adding elements
   - removing elements
@@ -52,7 +52,7 @@ just arrays and hashes!
 
 For example, any time you've interacted with the DOM in JavaScript, you've been
 interacting with a special data structure known as a **tree**; and
-[`querySelector`][] is a **tree traversal** method for efficiently finding a
+[`querySelector`][] is a **tree traversal method** for efficiently finding a
 child element within the DOM tree.
 
 [`queryselector`]: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
@@ -65,8 +65,9 @@ of elements).
 [fiber]: https://github.com/acdlite/React-fiber-architecture#what-is-a-fiber
 
 Another place you've seen a common data structure in action is the
-[call stack][], which is used to keep track of all the currently running
-functions in a program and make sure they're executed in the correct order.
+[call stack][], which uses a **stack** data structure to keep track of all the
+currently running functions in a program and make sure they're executed in the
+correct order.
 
 [call stack]: https://en.wikipedia.org/wiki/Call_stack
 
@@ -84,8 +85,9 @@ reminder, every data structure we make needs a way to do the following things:
 - Store the **relationship between those values**
 - Provide **methods for interacting with those values**
 
-To start off, data structure we'll build will be defined as a class, which we'll
-call `MyArray` to differentiate it from the built-in `Array` class:
+To start off, every data structure we'll build will be defined as a class. For
+our array implementation, we'll call our class `MyArray` to differentiate it
+from the built-in `Array` class:
 
 ```rb
 class MyArray
@@ -143,10 +145,10 @@ puts arr.pop
 ```
 
 We've now defined our very own custom data structure! While it's highly unlikely
-that you'll need to build your own array class in the future, understanding this
-general approach to building data structures will help when you need to create
-other data structures that aren't provided by your programming language, such as
-a linked list.
+that you'll need to build your own _array_ class in the future, understanding
+this general approach to building data structures will help when you need to
+create other data structures that aren't provided by your programming language,
+such as a linked list.
 
 Another advantage of building custom data structures like this for solving
 algorithm problems is that it makes it easier to understand the Big O runtime.
